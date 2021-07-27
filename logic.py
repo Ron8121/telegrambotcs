@@ -177,7 +177,7 @@ async def callback_registration(callback_query: types.CallbackQuery):
     await db.create_user(callback_query.from_user.id)
 
     lang_markup = InlineKeyboardMarkup()
-    lang_markup.add(InlineKeyboardButton("UAH",callback_data='lang:ua'))
+    lang_markup.add(InlineKeyboardButton("UA",callback_data='lang:ua'))
     lang_markup.add(InlineKeyboardButton("RUS",callback_data='lang:ru'))
     lang_markup.add(InlineKeyboardButton("ENG",callback_data='lang:en'))  
     await bot.send_message(callback_query.from_user.id,'Выберите язык',reply_markup=lang_markup)
@@ -185,7 +185,7 @@ async def callback_registration(callback_query: types.CallbackQuery):
 @dp.callback_query_handler(lambda c: c.data == "cng_lang")
 async def callback_change_lang(callback_query: types.CallbackQuery):
     lang_markup = InlineKeyboardMarkup()
-    lang_markup.add(InlineKeyboardButton("UAH",callback_data='lang:ua'))
+    lang_markup.add(InlineKeyboardButton("UA",callback_data='lang:ua'))
     lang_markup.add(InlineKeyboardButton("RUS",callback_data='lang:ru'))
     lang_markup.add(InlineKeyboardButton("ENG",callback_data='lang:en'))  
     await bot.send_message(callback_query.from_user.id,'Выберите язык',reply_markup=lang_markup)
