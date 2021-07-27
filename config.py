@@ -9,7 +9,7 @@ import os
 TOKEN = "1903114881:AAHPnaUsbGWxb-vu3r4cSrrZpT42ON5vBqw" #цей удалить
 
 # пользовательське сооглашение пиши сам
-RULES = "Пользовательське соглашение и т.д..."
+RULES = "Пользовательське соглашение и т.д... https://telegra.ph/Polzovatelskoe-soglashenie-12-12"
 
 # имя твого бота типо @BotMy 
 BOT_NAME="@KOSMOLOT_WIN_Bot" 
