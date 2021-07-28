@@ -27,13 +27,13 @@ async def get_photo():
 
 
 async def main_menu_ru():
-    markup = ReplyKeyboardMarkup([[
+    markup = ReplyKeyboardMarkup(resize_keyboard=True)([[
         KeyboardButton("🖥 Личный кабинет"),
         KeyboardButton("🎯 Игры")],[
         KeyboardButton("📊 Статистика"),
         KeyboardButton("🛡 Тех.Поддержка")]]
         )
-    inline = InlineKeyboardMarkup().row(
+    inline = InlineKeyboardMarkup(resize_keyboard=True)().row(
         InlineKeyboardButton("💸 Пополнить",callback_data="deposit"),
         InlineKeyboardButton("⌛️ Вывести",callback_data="withdraw"),
         InlineKeyboardButton("🌐 Сменить язык", callback_data="cng_lang")
@@ -41,13 +41,13 @@ async def main_menu_ru():
     return markup,inline
 
 async def main_menu_ua():
-    markup = ReplyKeyboardMarkup([[
+    markup = ReplyKeyboardMarkup(resize_keyboard=True)([[
         KeyboardButton("🖥 Особистий кабінет"),
         KeyboardButton("🎯 Ігри")],[
         KeyboardButton("📊 Статистика"),
         KeyboardButton("🛡 Тех.Підтримка")]]
         )
-    inline = InlineKeyboardMarkup().row(
+    inline = InlineKeyboardMarkup(resize_keyboard=True)().row(
         InlineKeyboardButton("💸 Повнити",callback_data="deposit"),
         InlineKeyboardButton("⌛️ Вивести",callback_data="withdraw"),
         InlineKeyboardButton("🌐 Змінити мову", callback_data="cng_lang")
